@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Vijayawada House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action='predict' method="post">
+      <input type="number" name="No Of Bedroom" placeholder="No Of Bedroom" required="required" /><br>
+    	<input type="number" name="No Of Bathroom" placeholder="No Of Bathroom" required="required" /><br>
+        <input type="number" name="Area required in sqft" placeholder="Area required in sqft" required="required" /><br>
+        <label for="CONSTRUCTION STATUS">Choose the status :</label>
+        <label for="Under construction">under construction =0</label>
+        <label for="Ready to move">Ready to move =1</label>
+        <label for="Resale">Resale=2</label>
+         <select name="status" id="status">
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+         </select>
+         <br><br>
+         <label for="Location">Choose the location :</label>
+         <label for="Poranki">Poranki =0</label>
+         <label for="Payakapuram">Payakapuram =1</label>
+         <label for="Kankipadu">Kankipadu =2</label>
+         <label for="Penamaluru">Penamaluru =3</label>
+         <label for="Gannavaram">Gannavaram =4</label>
+         <label for="Gollapudi">Gollapudi =5</label>
+         <label for="Gunadala">Gunadala =6</label>
+         <label for="PNT Colony">PNT Colony =7</label>
+         <label for="Enikepadu">Enikepadu =8</label>
+         <label for="Benzcircle">Benzcircle =9</label>
+         <label for="Labbipet">Labbipet =10</label>
+         <label for="Vidhyadharapuram">Vidhyadharapuram =11</label>
+         <select name="Location" id="Location">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+          </select>
+          <br><br>
+          <label for="FACING">Choose the facing :</label>
+          <label for="East">East =0</label>
+          <label for="West">West =1</label>
+          <label for="Northeast">Northeast =2</label>
+           <select name="facing" id="facing">
+             <option value="0">0</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+           </select>
+           <br><br>
+           <label for="PROPERTY TYPE">Choose the property type :</label>
+           <label for="Apartment">Apartment =0</label>
+           <label for="Independent House">Independent House =1</label>
+           <label for="Residential Plot">Residential Plot =2</label>
+            <select name="type" id="type">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+            <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+  <br><br>
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
